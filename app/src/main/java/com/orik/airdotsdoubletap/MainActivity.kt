@@ -1,7 +1,7 @@
 package com.orik.airdotsdoubletap
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlin.system.exitProcess
 import android.view.KeyEvent
@@ -22,11 +22,26 @@ class MainActivity : AppCompatActivity() {
     private fun skipTrack(appContext: Context) {
         val mAudioManager = appContext.getSystemService(Context.AUDIO_SERVICE) as AudioManager
         val eventTime = SystemClock.uptimeMillis()
+        var keyCode = KeyEvent.KEYCODE_MEDIA_NEXT
 
-        val downEvent = KeyEvent(eventTime, eventTime, KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_MEDIA_NEXT, 0)
-        mAudioManager.dispatchMediaKeyEvent(downEvent)
+        if(!mAudioManager.isMusicActive) {
+            keyCode = KeyEvent.KEYCODE_MEDIA_PREVIOUS
+            val prefs = getSharedPreferences(
+                this.applicationContext.packageName, MODE_PRIVATE
+            )
+            // Skip to previous song instead of rewinding current one if not at song start
+            if(prefs.getBoolean(getString(R.string.PREF_NO_REWIND), false)) {
+                pressKey(keyCode, mAudioManager, eventTime)
+            }
+        }
+        pressKey(keyCode, mAudioManager, eventTime)
+    }
 
-        val upEvent = KeyEvent(eventTime, eventTime, KeyEvent.ACTION_UP, KeyEvent.KEYCODE_MEDIA_NEXT, 0)
-        mAudioManager.dispatchMediaKeyEvent(upEvent)
+    private fun pressKey(keyCode: Int, audioManager: AudioManager, eventTime: Long) {
+        val downEvent = KeyEvent(eventTime, eventTime, KeyEvent.ACTION_DOWN, keyCode, 0)
+        audioManager.dispatchMediaKeyEvent(downEvent)
+
+        val upEvent = KeyEvent(eventTime, eventTime, KeyEvent.ACTION_UP, keyCode, 0)
+        audioManager.dispatchMediaKeyEvent(upEvent)
     }
 }
