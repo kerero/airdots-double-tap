@@ -2,8 +2,6 @@ package com.orik.airdotsdoubletap
 
 import android.app.Activity
 import android.os.Bundle
-import android.util.Log
-import android.widget.CompoundButton
 import kotlinx.android.synthetic.main.activity_settings.*
 
 class Settings : Activity() {

@@ -7,7 +7,6 @@ import kotlin.system.exitProcess
 import android.view.KeyEvent
 import android.os.SystemClock
 import android.media.AudioManager
-import android.util.Log
 
 
 class MainActivity : AppCompatActivity() {

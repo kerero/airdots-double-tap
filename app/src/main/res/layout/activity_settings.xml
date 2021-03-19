@@ -22,7 +22,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="251dp"
-        android:layout_height="35dp"
+        android:layout_height="62dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="12dp"
         android:text="@string/settings_no_rewind_desc"
@@ -37,7 +37,7 @@
         android:layout_marginTop="96dp"
         android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

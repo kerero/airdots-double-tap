@@ -10,9 +10,14 @@ I personally didn't liked this. Therefore AirdotsDoubleTap app will only run whi
 * Double tap the airdots 
 * The device will ask you with which app to complete the action
 * Select always with AirdotsDoubleTap
+
+### Play Previous song
+- Pouse the media with one tap
+- Once the media is poused double tap
 #
 #### Tested on:
  - Android 8.1 (Nexus 5x)
  - Android 9
  - Android 10 (Galaxy s10e)
+ - Android 11
 
