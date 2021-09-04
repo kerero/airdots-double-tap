@@ -13,8 +13,8 @@ I personally didn't liked this. Therefore AirdotsDoubleTap app will only run whi
 * Select always with AirdotsDoubleTap
 
 ### Play Previous song
-- Pouse the media with one tap
-- Once the media is poused double tap
+- Pause the media with one tap
+- Once the media is paused, double tap
 #
 #### Tested on:
  - Android 8.1 (Nexus 5x)
