@@ -1,8 +1,4 @@
 <resources>
+    <string name="PERF_skip_backwards_twice">skip_backwards_twice</string>
     <string name="app_name">Double-Tap</string>
-    <string name="settings_no_rewind">No Rewind</string>
-    <string name="settings_no_rewind_desc">
-        When \'triple\' tapping do not rewind and just skip to previous song (May help with some media players)
-    </string>
-    <string name="PREF_NO_REWIND">NO_REWIND</string>
 </resources>

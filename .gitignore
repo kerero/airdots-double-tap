@@ -1,5 +1,4 @@
 *.iml
-.idea
 .gradle
 /local.properties
 /.idea/caches
@@ -11,6 +10,8 @@
 .DS_Store
 /build
 /captures
+.externalNativeBuild
+.cxx
 
 # Built application files
 *.apk
@@ -93,3 +94,4 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+local.properties

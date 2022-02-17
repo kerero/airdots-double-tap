@@ -1,0 +1,55 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:selectable="false"
+        app:iconSpaceReserved="false"
+        app:summary="*This will replace your voice assistant functionality.To reverse this go to app settings and clear defaults"/>
+
+    <PreferenceCategory
+        app:title="How To Use" app:iconSpaceReserved="false">
+
+        <Preference
+            android:selectable="false"
+            app:iconSpaceReserved="false"
+            android:enabled="true"
+            android:title="Setup"
+            android:summary="1. Use your earphones to activate voice assistant (double tap on most earphones)
+            \n2. Android will prompt you to choose an app to complete the action
+            \n3. Select this app to always complete the action" />
+        <Preference
+            android:selectable="false"
+            android:enabled="true"
+            app:iconSpaceReserved="false"
+            android:title="Skip Media Forward"
+            android:summary="1. Use your earphones to activate voice assistant (double tap on most earphones)" />
+        <Preference
+            android:selectable="false"
+            android:enabled="true"
+            app:iconSpaceReserved="false"
+            android:title="Skip Media Backward"
+            android:summary="1. Use your earphones to pause the media (or pause it any other way)
+            \n2. Once the media is paused:
+            \nUse the your earphones to activate voice assistant (double tap on most earphones)" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Additional Settings" app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            app:key="@string/PERF_skip_backwards_twice"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            app:title="Skip Media Backwards twice"
+            app:summary="Skip backwards twice to previous song instead of the start of current song"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory  app:iconSpaceReserved="false">
+        <Preference
+            android:title="Github"
+            app:icon="@drawable/github_fabulous"
+            app:iconSpaceReserved="true">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://github.com/OriKerer/AirdotsDoubleTap" />
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>
