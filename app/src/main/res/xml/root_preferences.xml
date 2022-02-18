@@ -35,7 +35,7 @@
     <PreferenceCategory app:title="Additional Settings" app:iconSpaceReserved="false">
 
         <SwitchPreferenceCompat
-            app:key="@string/PERF_skip_backwards_twice"
+            app:key="@string/PREF_skip_backwards_twice"
             app:defaultValue="true"
             app:iconSpaceReserved="false"
             app:title="Skip Media Backwards twice"

@@ -1,4 +1,4 @@
 <resources>
-    <string name="PERF_skip_backwards_twice">skip_backwards_twice</string>
+    <string name="PREF_skip_backwards_twice">skip_backwards_twice</string>
     <string name="app_name">Double-Tap</string>
 </resources>
