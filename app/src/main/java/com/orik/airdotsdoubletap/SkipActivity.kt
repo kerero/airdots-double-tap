@@ -24,16 +24,13 @@ class SkipActivity : AppCompatActivity() {
         val mAudioManager = appContext.getSystemService(Context.AUDIO_SERVICE) as AudioManager
         val eventTime = SystemClock.uptimeMillis()
 
-        if(!mAudioManager.isMusicActive) {
+        if (!mAudioManager.isMusicActive) {
             pressKey(KeyEvent.KEYCODE_MEDIA_PREVIOUS, mAudioManager, eventTime)
             val prefs = PreferenceManager.getDefaultSharedPreferences(appContext)
+
             // Skip to previous song instead of rewinding current one if not at song start
-<<<<<<< HEAD
-            if(prefs.getBoolean(getString(R.string.PREF_skip_backwards_twice), false)) {
-=======
-            if(prefs.getBoolean(getString(R.string.PERF_skip_backwards_twice), false)) {
+            if (prefs.getBoolean(getString(R.string.PREF_skip_backwards_twice), false)) {
                 // Will resume play automatically
->>>>>>> 5d8bed0f629a8ad70202af9b7f971e576e2933bf
                 pressKey(KeyEvent.KEYCODE_MEDIA_PREVIOUS, mAudioManager, eventTime)
             } else {
                 // Music is paused -> resume play
@@ -41,8 +38,8 @@ class SkipActivity : AppCompatActivity() {
             }
         } else
             pressKey(KeyEvent.KEYCODE_MEDIA_NEXT, mAudioManager, eventTime)
-        }
     }
+
 
     private fun pressKey(keyCode: Int, audioManager: AudioManager, eventTime: Long) {
         val downEvent = KeyEvent(eventTime, eventTime, KeyEvent.ACTION_DOWN, keyCode, 0)
